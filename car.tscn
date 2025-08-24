@@ -9,6 +9,7 @@
 [node name="Car" type="Node3D"]
 
 [node name="CarPort" type="SubViewport" parent="."]
+transparent_bg = true
 handle_input_locally = false
 size = Vector2i(2, 2)
 render_target_update_mode = 4
