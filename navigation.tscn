@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://dcqhx0askgd7k"]
+[gd_scene load_steps=4 format=3 uid="uid://dcqhx0askgd7k"]
+
+[ext_resource type="Script" path="res://h_box_container.gd" id="1_262wm"]
+[ext_resource type="Texture2D" uid="uid://doq7lhtgmkji4" path="res://assets/ui/viewnav.png" id="1_l5uwk"]
+[ext_resource type="Texture2D" uid="uid://dh4t3lgt3866" path="res://assets/ui/viewnav_pressed.png" id="2_o0tbf"]
 
 [node name="Navigation" type="Control"]
 layout_mode = 3
@@ -9,11 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 1150.0
-offset_bottom = 649.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+script = ExtResource("1_262wm")
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+[node name="Viewnav_Left" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("1_l5uwk")
+texture_hover = ExtResource("2_o0tbf")
+stretch_mode = 0
+
+[node name="Viewnav_Right" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture_normal = ExtResource("1_l5uwk")
+texture_hover = ExtResource("2_o0tbf")
+stretch_mode = 0
+flip_h = true
