@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=3 uid="uid://bhvm3ix6e6p72"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://bhvm3ix6e6p72"]
+>>>>>>> ad71725c520a1c18a6697cdf688b6d6aa26f1549
 
 [ext_resource type="PackedScene" uid="uid://begf6fmbug71f" path="res://car.tscn" id="1_babhs"]
 [ext_resource type="Script" path="res://car.gd" id="2_62tuk"]
 [ext_resource type="PackedScene" uid="uid://dvcb124na87ly" path="res://player.tscn" id="2_abx8b"]
+[ext_resource type="PackedScene" uid="uid://dcqhx0askgd7k" path="res://navigation.tscn" id="4_x8pmm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fyjie"]
 sky_top_color = Color(0.424, 0.53, 0.452267, 1)
@@ -30,5 +35,9 @@ script = ExtResource("2_62tuk")
 
 [node name="Player" parent="." instance=ExtResource("2_abx8b")]
 
+<<<<<<< HEAD
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_4okk0")
+=======
+[node name="Navigation" parent="." instance=ExtResource("4_x8pmm")]
+>>>>>>> ad71725c520a1c18a6697cdf688b6d6aa26f1549
