@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://begf6fmbug71f"]
+[gd_scene load_steps=6 format=3 uid="uid://begf6fmbug71f"]
+
+[ext_resource type="Texture2D" uid="uid://cmgiw2pnjtuw4" path="res://assets/car_main.png" id="1_eyt25"]
+[ext_resource type="Script" path="res://car_port.gd" id="2_35wb7"]
+[ext_resource type="Texture2D" uid="uid://brswx1a43yhm" path="res://assets/car_left.png" id="2_hi7el"]
+[ext_resource type="Texture2D" uid="uid://bltqkhrfvw6ch" path="res://assets/car_right.png" id="3_5h13w"]
+[ext_resource type="Script" path="res://car_sprite.gd" id="4_bmlkx"]
 
 [node name="Car" type="Node3D"]
+
+[node name="CarPort" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+script = ExtResource("2_35wb7")
+
+[node name="Views" type="Node" parent="CarPort"]
+
+[node name="CenterConsole" type="TextureRect" parent="CarPort/Views"]
+offset_right = 2837.0
+offset_bottom = 1615.0
+texture = ExtResource("1_eyt25")
+expand_mode = 1
+
+[node name="LeftWindow" type="TextureRect" parent="CarPort/Views"]
+visible = false
+offset_right = 2837.0
+offset_bottom = 1617.0
+texture = ExtResource("2_hi7el")
+
+[node name="RightWindow" type="TextureRect" parent="CarPort/Views"]
+visible = false
+offset_right = 2838.0
+offset_bottom = 1620.0
+texture = ExtResource("3_5h13w")
+
+[node name="CarSprite" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+texture = ExtResource("3_5h13w")
+script = ExtResource("4_bmlkx")

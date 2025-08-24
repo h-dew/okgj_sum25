@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvcb124na87ly"]
+[gd_scene load_steps=3 format=3 uid="uid://dvcb124na87ly"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_cnjqq"]
+[ext_resource type="Script" path="res://player_cam.gd" id="2_4xkfq"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_cnjqq")
 
-[node name="Eyes" type="Camera3D" parent="."]
+[node name="PlayerCam" type="Camera3D" parent="."]
+script = ExtResource("2_4xkfq")
 
 [node name="Paw" type="Sprite3D" parent="."]

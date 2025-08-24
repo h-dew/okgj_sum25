@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="okgj_sum25"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Actions="*res://actions.gd"
 Events="*res://autoloads/events.gd"
