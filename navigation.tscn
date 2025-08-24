@@ -23,7 +23,7 @@ theme_override_constants/separation = 50
 script = ExtResource("1_262wm")
 
 [node name="Viewnav_Left" type="TextureButton" parent="HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = ExtResource("1_l5uwk")
@@ -31,7 +31,7 @@ texture_hover = ExtResource("2_o0tbf")
 stretch_mode = 0
 
 [node name="Viewnav_Right" type="TextureButton" parent="HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
@@ -39,3 +39,6 @@ texture_normal = ExtResource("1_l5uwk")
 texture_hover = ExtResource("2_o0tbf")
 stretch_mode = 0
 flip_h = true
+
+[connection signal="button_down" from="HBoxContainer/Viewnav_Left" to="HBoxContainer" method="_on_viewnav_left_button_down"]
+[connection signal="button_down" from="HBoxContainer/Viewnav_Right" to="HBoxContainer" method="_on_viewnav_right_button_down"]

@@ -9,4 +9,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	texture = get_parent().get_node("CarPort").get_texture()
+	position = get_parent().get_parent().get_node("Player").position + PlayerData.caroffset * 5
 	pass

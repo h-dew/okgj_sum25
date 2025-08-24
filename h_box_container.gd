@@ -18,3 +18,11 @@ func _process(delta: float) -> void:
 	
 	get_node("Viewnav_Left").self_modulate = alpha
 	get_node("Viewnav_Right").self_modulate = alpha
+
+
+func _on_viewnav_left_button_down() -> void:
+	PlayerData.turnLeft()
+
+
+func _on_viewnav_right_button_down() -> void:
+	PlayerData.turnRight()

@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://uevbc6nm78d7"]
+[gd_scene load_steps=6 format=3 uid="uid://bhvm3ix6e6p72"]
 
 [ext_resource type="PackedScene" uid="uid://begf6fmbug71f" path="res://car.tscn" id="1_babhs"]
-[ext_resource type="Script" path="res://car.gd" id="2_62tuk"]
 [ext_resource type="PackedScene" uid="uid://dvcb124na87ly" path="res://player.tscn" id="2_abx8b"]
-[ext_resource type="PackedScene" uid="uid://b37wfgesc6ac7" path="res://cop.tscn" id="4_wvxid"]
-[ext_resource type="PackedScene" path="res://navigation.tscn" id="4_x8pmm"]
-[ext_resource type="PackedScene" uid="uid://dasy3bv2put11" path="res://screen_text.tscn" id="5_w86sb"]
+[ext_resource type="PackedScene" uid="uid://gbunm2rmsu7n" path="res://cop.tscn" id="4_wvxid"]
+[ext_resource type="PackedScene" uid="uid://dcqhx0askgd7k" path="res://navigation.tscn" id="4_x8pmm"]
+[ext_resource type="PackedScene" path="res://screen_text.tscn" id="5_w86sb"]
 
 [node name="Game" type="Node3D"]
 
@@ -13,11 +12,10 @@
 visible = false
 
 [node name="Car" parent="." instance=ExtResource("1_babhs")]
-script = ExtResource("2_62tuk")
 
 [node name="Player" parent="." instance=ExtResource("2_abx8b")]
 
 [node name="Navigation" parent="." instance=ExtResource("4_x8pmm")]
 
 [node name="Cop" parent="." instance=ExtResource("4_wvxid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56791, -7.10355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27585, 1.46042, -4.17363)

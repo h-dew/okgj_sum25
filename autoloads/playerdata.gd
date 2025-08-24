@@ -1,7 +1,10 @@
 extends Node
 
-enum Views {front, left, right, back}
+enum Views {left = 0, front = 1, right = 2, back = 3}
 var view
+
+var sanity: float
+
 var caroffset
 var vpsize
 var mousepos
@@ -16,13 +19,23 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func changeView(view: Views):
-	match view:
+func changeView(newView: Views):
+	match newView:
 		Views.front:
-			caroffset = Vector3(0,0,9)
+			view = newView
+			caroffset = Vector3(0,0,-1)
 		Views.left:
-			caroffset = Vector3(0,0,9)
+			view = newView
+			caroffset = Vector3(-1,0,0)
 		Views.right:
-			caroffset = Vector3(0,0,9)
+			view = newView
+			caroffset = Vector3(1,0,0)
 		Views.back:
-			caroffset = Vector3(0,0,-9)
+			view = newView
+			caroffset = Vector3(0,0,1)
+			
+func turnLeft():
+	changeView(abs(view - 1) % 4)
+	
+func turnRight():
+	changeView((view + 1) % 4)

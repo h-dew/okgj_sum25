@@ -1,42 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://begf6fmbug71f"]
+[gd_scene load_steps=8 format=3 uid="uid://begf6fmbug71f"]
 
 [ext_resource type="Texture2D" uid="uid://cmgiw2pnjtuw4" path="res://assets/car_main.png" id="1_eyt25"]
+[ext_resource type="Script" path="res://car.gd" id="1_wn57u"]
 [ext_resource type="Script" path="res://car_port.gd" id="2_35wb7"]
 [ext_resource type="Texture2D" uid="uid://brswx1a43yhm" path="res://assets/car_left.png" id="2_hi7el"]
 [ext_resource type="Texture2D" uid="uid://bltqkhrfvw6ch" path="res://assets/car_right.png" id="3_5h13w"]
 [ext_resource type="Script" path="res://car_sprite.gd" id="4_bmlkx"]
+[ext_resource type="Texture2D" uid="uid://buk7x36aje4de" path="res://assets/car_back.png" id="5_thi3j"]
 
 [node name="Car" type="Node3D"]
+script = ExtResource("1_wn57u")
 
 [node name="CarPort" type="SubViewport" parent="."]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 script = ExtResource("2_35wb7")
 
 [node name="Views" type="Node" parent="CarPort"]
 
-[node name="CenterConsole" type="TextureRect" parent="CarPort/Views"]
-offset_right = 2837.0
-offset_bottom = 1615.0
+[node name="Front" type="TextureRect" parent="CarPort/Views"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1418.5
+offset_top = -807.5
+offset_right = 1418.5
+offset_bottom = 807.5
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_eyt25")
 expand_mode = 1
 
-[node name="LeftWindow" type="TextureRect" parent="CarPort/Views"]
-visible = false
+[node name="Right" type="TextureRect" parent="CarPort/Views"]
 offset_right = 2837.0
-offset_bottom = 1617.0
-texture = ExtResource("2_hi7el")
-
-[node name="RightWindow" type="TextureRect" parent="CarPort/Views"]
-visible = false
-offset_right = 2838.0
-offset_bottom = 1620.0
+offset_bottom = 1615.0
 texture = ExtResource("3_5h13w")
+expand_mode = 1
+
+[node name="Left" type="TextureRect" parent="CarPort/Views"]
+offset_right = 2837.0
+offset_bottom = 1615.0
+texture = ExtResource("2_hi7el")
+expand_mode = 1
+
+[node name="Back" type="TextureRect" parent="CarPort/Views"]
+offset_right = 2837.0
+offset_bottom = 1615.0
+texture = ExtResource("5_thi3j")
+expand_mode = 1
 
 [node name="CarSprite" type="Sprite3D" parent="."]
-offset = Vector2(600, -550)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 billboard = 1
+double_sided = false
 texture = ExtResource("1_eyt25")
 script = ExtResource("4_bmlkx")

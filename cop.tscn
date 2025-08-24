@@ -1,6 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://b37wfgesc6ac7"]
+[gd_scene load_steps=5 format=3 uid="uid://gbunm2rmsu7n"]
 
 [ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="1_l3oux"]
+
+[sub_resource type="Animation" id="Animation_odfa8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_av1as"]
 resource_name = "walk"
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, -0.174533), Vector3(0, 0, 0.174533)]
 }
 
-[sub_resource type="Animation" id="Animation_odfa8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j7vit"]
 _data = {
 "RESET": SubResource("Animation_odfa8"),
@@ -43,6 +43,7 @@ _data = {
 [node name="Cop" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
 texture = ExtResource("1_l3oux")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D"]
