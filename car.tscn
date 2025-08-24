@@ -35,6 +35,5 @@ offset_bottom = 1620.0
 texture = ExtResource("3_5h13w")
 
 [node name="CarSprite" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
-texture = ExtResource("3_5h13w")
+texture = ExtResource("1_eyt25")
 script = ExtResource("4_bmlkx")

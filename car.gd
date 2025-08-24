@@ -1,6 +1,4 @@
-extends Camera3D
-var vpsize
-var mousepos
+extends Node3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,8 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	vpsize = get_viewport().get_visible_rect().size
-	mousepos = get_viewport().get_mouse_position()
-	
-	remap(mousepos.x, 0, vpsize.x, -1, 1)
-	remap(mousepos.y, 0, vpsize.y, -1, 1)
+	position = get_parent().get_node("Player").position - Vector3(-6,6,7)
+	pass
