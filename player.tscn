@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvcb124na87ly"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_cnjqq"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_cnjqq")
+
+[node name="Eyes" type="Camera3D" parent="."]
+
+[node name="Paw" type="Sprite3D" parent="."]
