@@ -30,3 +30,8 @@
 # Actors - Individual objects/characters
 - water bottle
 - wiper fluid (max out whimsy)
+
+
+# Image Pipeline
+- Reduce size ~100px wide
+- Reduce colours, 12 colours
