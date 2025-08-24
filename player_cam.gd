@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 	vpsize = get_viewport().get_visible_rect().size
 	mousepos = get_viewport().get_mouse_position()
 	
-	remap(mousepos.x, 0, vpsize.x, -1, 1)
-	remap(mousepos.y, 0, vpsize.y, -1, 1)
+	
+	rotation = Vector3(0.1 * remap(mousepos.y, 0, vpsize.y, -1, 1), 0.1 * remap(mousepos.x, 0, vpsize.x, -1, 1), 0)
