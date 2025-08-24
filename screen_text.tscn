@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dasy3bv2put11"]
+
+[ext_resource type="FontFile" uid="uid://cloq7owj3ab1a" path="res://assets/VT323-Regular.ttf" id="1_mhlla"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r73an"]
+font = ExtResource("1_mhlla")
+font_size = 100
+outline_size = 6
+
+[node name="ScreenText" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(600, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+color = Color(0.23, 0.23, 0.23, 0.388235)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "REPLACE ME"
+label_settings = SubResource("LabelSettings_r73an")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true

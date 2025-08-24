@@ -13,9 +13,17 @@ config_version=5
 config/name="okgj_sum25"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
 
 Events="*res://autoloads/events.gd"
 PlayerData="*res://autoloads/playerdata.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
