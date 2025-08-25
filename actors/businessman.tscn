@@ -21,6 +21,7 @@ curve = SubResource("Curve3D_r23fq")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, -1.53035)
 progress = 2.47
+loop = false
 script = ExtResource("1_v2d6c")
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D"]

@@ -3,6 +3,10 @@ extends Node
 # Encounter System
 const CHANCE_INCREMENT = 0.001
 
+# Actor Settings
+const COP_SPEED = 0.05
+const BUSINESSMAN_SPEED = 0.1
+
 # Mouse & Camera Settings
 const MOUSE_SENSITIVITY = 0.1
 const CAMERA_BASE_PITCH = 0.3
