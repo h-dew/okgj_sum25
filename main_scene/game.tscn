@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://begf6fmbug71f" path="res://main_scene/car.tscn" id="1_babhs"]
 [ext_resource type="PackedScene" uid="uid://dvcb124na87ly" path="res://main_scene/player.tscn" id="2_abx8b"]
 [ext_resource type="PackedScene" uid="uid://dcqhx0askgd7k" path="res://main_scene/navigation.tscn" id="4_x8pmm"]
-[ext_resource type="PackedScene" path="res://screen_text.tscn" id="5_w86sb"]
+[ext_resource type="PackedScene" uid="uid://dasy3bv2put11" path="res://screen_text.tscn" id="5_w86sb"]
 
 [node name="Game" type="Node3D"]
 

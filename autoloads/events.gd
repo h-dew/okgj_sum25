@@ -11,6 +11,8 @@ var chance: float
 var cInc: float
 #var actors: [Node]
 
+const TEXTPATH = "res://screen_text.tscn"
+
 
 func _ready() -> void:
 	state = States.idle
