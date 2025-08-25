@@ -6,6 +6,7 @@ enum Views {left = 0, front = 1, right = 2, back = 3}
 var view
 
 var sanity: float
+var bark: bool
 
 var caroffset
 var vpsize

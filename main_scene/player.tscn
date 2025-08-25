@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvcb124na87ly"]
+[gd_scene load_steps=6 format=3 uid="uid://dvcb124na87ly"]
 
-[ext_resource type="Script" path="res://main_scene/scripts/player.gd" id="1_cnjqq"]
 [ext_resource type="Script" path="res://main_scene/scripts/player_cam.gd" id="2_4xkfq"]
 [ext_resource type="Texture2D" uid="uid://by42aj2hav00c" path="res://assets/dog_paw.png" id="3_j1ioh"]
 [ext_resource type="Script" path="res://main_scene/scripts/paw.gd" id="4_53e0y"]
+[ext_resource type="AudioStream" uid="uid://dkxansvxq1bmt" path="res://assets/ui/sfx/bark.wav" id="5_6laqk"]
+[ext_resource type="Script" path="res://main_scene/barkplayer.gd" id="6_3j1rq"]
 
 [node name="Player" type="Node3D"]
-script = ExtResource("1_cnjqq")
 
 [node name="PlayerCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -39,3 +39,7 @@ render_target_update_mode = 4
 [node name="paw" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport"]
 texture = ExtResource("3_j1ioh")
 script = ExtResource("4_53e0y")
+
+[node name="barkplayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6laqk")
+script = ExtResource("6_3j1rq")

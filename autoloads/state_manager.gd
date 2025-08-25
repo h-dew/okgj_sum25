@@ -6,6 +6,7 @@ var states: Dictionary = {}
 
 func _ready() -> void:
 	# Register all states
+	register_state("paused", PauseState.new())
 	register_state("idle", IdleState.new())
 	register_state("cops", CopsState.new())
 	register_state("start", StartState.new())

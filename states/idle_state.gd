@@ -5,7 +5,9 @@ var encounter_chance : float
 
 
 func enter() -> void:
+	PlayerData.bark = true
 	var encounter_chance = 0.0
+	
 
 func update(delta: float) -> void:
 	encounter_chance += GameData.CHANCE_INCREMENT * delta

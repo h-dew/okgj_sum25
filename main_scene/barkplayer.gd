@@ -1,4 +1,4 @@
-extends Node3D
+extends AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,4 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("bark") && PlayerData.bark:
+		play()
 	pass
+	
