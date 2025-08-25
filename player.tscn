@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player.gd" id="1_cnjqq"]
 [ext_resource type="Script" path="res://player_cam.gd" id="2_4xkfq"]
 [ext_resource type="Texture2D" uid="uid://by42aj2hav00c" path="res://assets/dog_paw.png" id="3_j1ioh"]
-[ext_resource type="Script" path="res://paw.gd" id="4_53e0y"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="4_4dy36"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_cnjqq")
@@ -12,7 +12,29 @@ script = ExtResource("1_cnjqq")
 fov = 90.0
 script = ExtResource("2_4xkfq")
 
-[node name="Paw" type="Sprite3D" parent="."]
-transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 0, 0, 0)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="paw" type="Sprite2D" parent="Control/SubViewportContainer/SubViewport"]
 texture = ExtResource("3_j1ioh")
-script = ExtResource("4_53e0y")
+script = ExtResource("4_4dy36")

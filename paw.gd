@@ -9,5 +9,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	position = PlayerData.caroffset
+	position = PlayerData.caroffset * Vector3(-1, 0, 0)
 	pass

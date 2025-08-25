@@ -14,6 +14,7 @@ script = ExtResource("1_wn57u")
 [node name="CarPort" type="SubViewport" parent="."]
 transparent_bg = true
 handle_input_locally = false
+scaling_3d_scale = 0.25
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 script = ExtResource("2_35wb7")
