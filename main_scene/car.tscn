@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://begf6fmbug71f"]
 
 [ext_resource type="Texture2D" uid="uid://cmgiw2pnjtuw4" path="res://assets/car_main.png" id="1_eyt25"]
-[ext_resource type="Script" path="res://car.gd" id="1_wn57u"]
-[ext_resource type="Script" path="res://car_port.gd" id="2_35wb7"]
+[ext_resource type="Script" path="res://main_scene/scripts/car.gd" id="1_wn57u"]
+[ext_resource type="Script" path="res://main_scene/scripts/car_port.gd" id="2_35wb7"]
 [ext_resource type="Texture2D" uid="uid://brswx1a43yhm" path="res://assets/car_left.png" id="2_hi7el"]
 [ext_resource type="Texture2D" uid="uid://bltqkhrfvw6ch" path="res://assets/car_right.png" id="3_5h13w"]
-[ext_resource type="Script" path="res://car_sprite.gd" id="4_bmlkx"]
+[ext_resource type="Script" path="res://main_scene/scripts/car_sprite.gd" id="4_bmlkx"]
 [ext_resource type="Texture2D" uid="uid://buk7x36aje4de" path="res://assets/car_back.png" id="5_thi3j"]
 
 [node name="Car" type="Node3D"]

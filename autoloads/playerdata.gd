@@ -35,7 +35,7 @@ func changeView(newView: Views):
 			caroffset = Vector3(0,0,1)
 			
 func turnLeft():
-	changeView(abs(view - 1) % 4)
+	changeView(wrap(view - 1, 0, 4))
 	
 func turnRight():
 	changeView((view + 1) % 4)

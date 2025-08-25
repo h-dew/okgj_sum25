@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://gbunm2rmsu7n"]
+[gd_scene load_steps=6 format=3 uid="uid://biru6lp5rrbjj"]
 
-[ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="1_l3oux"]
+[ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="1_s8anl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqvmn"]
 
 [sub_resource type="Animation" id="Animation_odfa8"]
 length = 0.001
@@ -40,11 +42,16 @@ _data = {
 "walk": SubResource("Animation_av1as")
 }
 
-[node name="Cop" type="Node3D"]
+[node name="Baseactor" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 1
-texture = ExtResource("1_l3oux")
+texture = ExtResource("1_s8anl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D"]
+shape = SubResource("CapsuleShape3D_wqvmn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D"]
 libraries = {

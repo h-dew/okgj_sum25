@@ -2,18 +2,16 @@ extends Sprite2D
 
 var texturerotation = -PI/6
 var textureoffset
-var textureScale
+var texturescale
 
-var x
-var y
 var texturetrans
 
 
 func _ready() -> void:
-	x = Vector2(6, 0)
-	y = Vector2(0, 8)
+	var x = Vector2(6, 0)
+	var y = Vector2(0, 8)
 	
-	offset = Vector2(0, 40)
+	offset = Vector2(0, 60)
 	texturetrans = Transform2D(x, y, Vector2(0, 0))	
 
 
