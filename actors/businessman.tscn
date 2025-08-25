@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://gbunm2rmsu7n"]
+[gd_scene load_steps=5 format=3 uid="uid://cbgga2qvutwrj"]
 
-[ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="2_8a633"]
-[ext_resource type="Script" path="res://actors/scripts_generic/follow_path.gd" id="2_ulq6u"]
+[ext_resource type="Script" path="res://actors/scripts_generic/follow_path.gd" id="1_v2d6c"]
+[ext_resource type="Texture2D" uid="uid://eutepsa8tv3a" path="res://assets/businessman.png" id="2_ffqs5"]
 
 [sub_resource type="Curve3D" id="Curve3D_r23fq"]
 _data = {
@@ -12,7 +12,7 @@ point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jsacr"]
 
-[node name="Cop" type="Node3D"]
+[node name="Businessman" type="Node3D"]
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.999615, 0.0277472, 0, -0.0277472, 0.999615, 0, 0, 0)
@@ -21,13 +21,13 @@ curve = SubResource("Curve3D_r23fq")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, -1.53035)
 progress = 2.47
-script = ExtResource("2_ulq6u")
+script = ExtResource("1_v2d6c")
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 1.30137)
 sorting_offset = -1.0
 billboard = 1
-texture = ExtResource("2_8a633")
+texture = ExtResource("2_ffqs5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Path3D/PathFollow3D/Sprite3D"]
 

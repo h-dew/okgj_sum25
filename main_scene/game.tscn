@@ -8,6 +8,7 @@
 [node name="Game" type="Node3D"]
 
 [node name="ScreenText" parent="." instance=ExtResource("5_w86sb")]
+unique_name_in_owner = true
 visible = false
 
 [node name="Car" parent="." instance=ExtResource("1_babhs")]
