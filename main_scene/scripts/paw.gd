@@ -1,22 +1,18 @@
 extends Sprite2D
 
-var texturerotation = -PI/6
-var textureoffset
-var texturescale
-
-var texturetrans
-
+@onready var paw_transform: Transform2D
 
 func _ready() -> void:
-	var x = Vector2(6, 0)
-	var y = Vector2(0, 8)
-	
-	offset = Vector2(0, 60)
-	texturetrans = Transform2D(x, y, Vector2(0, 0))	
+	setup_paw_transform()
+	offset = Vector2(0, GameData.PAW_OFFSET_Y)
 
+func setup_paw_transform() -> void:
+	var scale_x = Vector2(GameData.PAW_SCALE_X, 0)
+	var scale_y = Vector2(0, GameData.PAW_SCALE_Y)
+	paw_transform = Transform2D(scale_x, scale_y, Vector2.ZERO)
+	paw_transform = paw_transform.rotated(GameData.PAW_ROTATION)  # Bake rotation into transform
 
-func _process(delta: float) -> void:	
-	transform = texturetrans
-	transform[2] = get_viewport().get_mouse_position()
-	
-	rotation = texturerotation
+func _process(delta: float) -> void:
+	transform = paw_transform
+	transform.origin = get_viewport().get_mouse_position()
+	# No need to set rotation here since it's baked into paw_transform
