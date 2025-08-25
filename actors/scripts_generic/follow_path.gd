@@ -1,13 +1,13 @@
-extends Sprite3D
+extends PathFollow3D
 
+var progPerSec
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	progPerSec = 0.1
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	texture = get_parent().get_node("CarPort").get_texture()
-	position = get_parent().get_parent().get_node("Player").position + PlayerData.caroffset * 3
-	pass
+	progress_ratio += progPerSec * delta

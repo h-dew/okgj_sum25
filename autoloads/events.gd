@@ -3,19 +3,29 @@ extends Node
 enum States {idle, paused, ending, loading,
 cops, hippies, businessmen, kids, dog, thunderstorm}
 
-var state
-var prevState
+var state # stores current state
+var prevState # used for pause
 
-# Called when the node enters the scene tree for the first time.
+# State Varibles - can be used freely by individual states
+var chance: float 
+var cInc: float
+#var actors: [Node]
+
+
 func _ready() -> void:
+	state = States.idle
+	
+	cInc = 0.001
+	
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	match state:
 		States.idle:
-			pass
+			chance += cInc * delta
+			if(PlayerData.rand.randf_range(0, 1) < chance):
+				setCops()
 		States.paused:
 			pass
 		States.ending:
@@ -39,6 +49,7 @@ func _process(delta: float) -> void:
 	
 
 func setIdle() -> void:
+	chance = 0
 	pass
 	
 func setPaused() -> bool:
@@ -61,7 +72,21 @@ func setLoading() -> void:
 
 
 func setCops() -> void:
+	state = States.cops
+	print("theyre coming to get you!!")
+	
+	var cop = load("res://actors/cop.tscn")
+	cop = cop.instantiate()
+	get_parent().add_child(cop)
+	
+	cop = get_parent().get_node("Cop")
+	#cop.get_child(0).get_child(0).get_child(0).get_child(0).input_event.connect(_cop_pressed)
+	#actors += [cop]
+	
+	
+func _cop_pressed() -> void:
 	pass
+	
 func setHippies() -> void:
 	pass
 func setBusinessmen() -> void:

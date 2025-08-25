@@ -9,7 +9,8 @@
 script = ExtResource("1_cnjqq")
 
 [node name="PlayerCam" type="Camera3D" parent="."]
-fov = 90.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+fov = 120.0
 script = ExtResource("2_4xkfq")
 
 [node name="Control" type="Control" parent="."]

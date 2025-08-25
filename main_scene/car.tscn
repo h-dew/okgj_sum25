@@ -56,6 +56,8 @@ expand_mode = 1
 
 [node name="CarSprite" type="Sprite3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+layers = 512
+sorting_offset = 1.0
 billboard = 1
 double_sided = false
 texture = ExtResource("1_eyt25")

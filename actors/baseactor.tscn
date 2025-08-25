@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://biru6lp5rrbjj"]
+[gd_scene load_steps=7 format=3 uid="uid://biru6lp5rrbjj"]
 
 [ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="1_s8anl"]
+[ext_resource type="Script" path="res://actors/sprite_3d.gd" id="2_r5dm6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqvmn"]
+height = 1.3
 
 [sub_resource type="Animation" id="Animation_odfa8"]
 length = 0.001
@@ -47,6 +49,7 @@ _data = {
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 1
 texture = ExtResource("1_s8anl")
+script = ExtResource("2_r5dm6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D"]
 
@@ -57,3 +60,5 @@ shape = SubResource("CapsuleShape3D_wqvmn")
 libraries = {
 "": SubResource("AnimationLibrary_j7vit")
 }
+
+[connection signal="input_event" from="Sprite3D/StaticBody3D" to="Sprite3D" method="_on_static_body_3d_input_event"]
