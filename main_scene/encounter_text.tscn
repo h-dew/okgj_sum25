@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv2js3883cjr0"]
+
+[ext_resource type="FontFile" uid="uid://cloq7owj3ab1a" path="res://assets/VT323-Regular.ttf" id="1_bymka"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d4e72"]
+font = ExtResource("1_bymka")
+font_size = 42
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="EncounterText" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST TEXT"
+label_settings = SubResource("LabelSettings_d4e72")
+horizontal_alignment = 1
+vertical_alignment = 1

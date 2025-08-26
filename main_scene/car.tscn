@@ -60,5 +60,6 @@ layers = 512
 sorting_offset = 1.0
 billboard = 1
 double_sided = false
+render_priority = 2
 texture = ExtResource("1_eyt25")
 script = ExtResource("4_bmlkx")
