@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Control
 
 @onready var viewport_half_size: Vector2
 @onready var mouse_position: Vector2
@@ -12,6 +12,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	viewport_half_size = get_viewport().get_visible_rect().size / 2
 	mouse_position = get_viewport().get_mouse_position()
+	
+	size = viewport_half_size * 2
 	
 	var alpha_value = calculate_ui_fade_alpha()
 	var alpha_color = Color(1, 1, 1, alpha_value)

@@ -2,8 +2,6 @@ extends SubViewport
 var view
 var textureparent
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	size = DisplayServer.screen_get_size()
 	view = PlayerData.view
@@ -13,11 +11,7 @@ func _ready() -> void:
 	textureparent.get_node("Right").hide()
 	textureparent.get_node("Left").hide()
 	textureparent.get_node("Back").hide()
-	
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	size = PlayerData.vpsize
 	if view != PlayerData.view:

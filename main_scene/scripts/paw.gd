@@ -13,6 +13,7 @@ func setup_paw_transform() -> void:
 	paw_transform = paw_transform.rotated(GameData.PAW_ROTATION)  # Bake rotation into transform
 
 func _process(delta: float) -> void:
+	get_parent().get_parent().get_parent().size = PlayerData.vpsize
 	transform = paw_transform
-	transform.origin = get_viewport().get_mouse_position()
+	transform.origin = get_node("/root").get_mouse_position()
 	# No need to set rotation here since it's baked into paw_transform

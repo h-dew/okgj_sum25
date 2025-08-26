@@ -12,7 +12,8 @@ _data = {
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jsacr"]
-radius = 1.0
+margin = 1.129
+radius = 0.9
 height = 4.0
 
 [node name="Businessman" type="Node3D"]
@@ -34,8 +35,9 @@ billboard = 1
 texture = ExtResource("2_ffqs5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Path3D/PathFollow3D/Sprite3D"]
+input_capture_on_drag = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Sprite3D/StaticBody3D"]
 shape = SubResource("CapsuleShape3D_jsacr")
 
-[connection signal="input_event" from="Path3D/PathFollow3D/Sprite3D/StaticBody3D" to="." method="_on_moused_event"]
+[connection signal="input_event" from="Path3D/PathFollow3D/Sprite3D/StaticBody3D" to="." method="_on_static_body_3d_input_event"]
