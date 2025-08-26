@@ -19,6 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	size = PlayerData.vpsize
 	if view != PlayerData.view:
 		changeTexture(PlayerData.view)
 

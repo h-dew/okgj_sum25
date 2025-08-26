@@ -17,3 +17,4 @@ func enter() -> void:
 	
 func exit() -> void:
 	get_tree().current_scene.get_node("ScreenText").visible = false
+	

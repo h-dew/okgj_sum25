@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 	progress_ratio += speed * delta
 	if snapped_progress < snapped(progress_ratio, 0.01):
 		snapped_progress = snapped(progress_ratio, 0.01)
-		print (snapped_progress)
 		path_progress_updated.emit(progress_ratio)
 	
 	# Handle path completion

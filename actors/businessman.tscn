@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbgga2qvutwrj"]
+[gd_scene load_steps=6 format=3 uid="uid://b6oi7s6563nde"]
 
+[ext_resource type="Script" path="res://actors/businessman.gd" id="1_ddfyp"]
 [ext_resource type="Script" path="res://actors/scripts_generic/follow_path.gd" id="1_v2d6c"]
 [ext_resource type="Texture2D" uid="uid://eutepsa8tv3a" path="res://assets/businessman.png" id="2_ffqs5"]
 
@@ -11,21 +12,23 @@ _data = {
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jsacr"]
+radius = 1.0
+height = 4.0
 
 [node name="Businessman" type="Node3D"]
+script = ExtResource("1_ddfyp")
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.999615, 0.0277472, 0, -0.0277472, 0.999615, 0, 0, 0)
 curve = SubResource("Curve3D_r23fq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, -1.53035)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -4, 2, -1.53035)
 progress = 2.47
 loop = false
 script = ExtResource("1_v2d6c")
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 1.30137)
 sorting_offset = -1.0
 billboard = 1
 texture = ExtResource("2_ffqs5")
@@ -34,3 +37,5 @@ texture = ExtResource("2_ffqs5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Sprite3D/StaticBody3D"]
 shape = SubResource("CapsuleShape3D_jsacr")
+
+[connection signal="input_event" from="Path3D/PathFollow3D/Sprite3D/StaticBody3D" to="." method="_on_moused_event"]
