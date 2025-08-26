@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve3D" id="Curve3D_r23fq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4, 2, -4, 0, 0, 0, 0, 0, 0, -4, 2, 4),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4, 2.88872, -3.97533, 0, 0, 0, 0, 0, 0, -2.72293, 1.49496, 1.97839),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -19,7 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999615, 0.0277472, 0, -0.0277472, 0.999615
 curve = SubResource("Curve3D_r23fq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, -1.53035)
+transform = Transform3D(-0.977758, 0.0467947, -0.204441, 5.58793e-09, 0.974786, 0.223121, 0.209728, 0.218158, -0.953107, -3.49506, 2.33764, -1.6213)
 progress = 2.47
 loop = false
 script = ExtResource("2_ulq6u")
