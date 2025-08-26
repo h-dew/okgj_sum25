@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://gbunm2rmsu7n"]
+[gd_scene load_steps=6 format=3 uid="uid://gbunm2rmsu7n"]
 
 [ext_resource type="Texture2D" uid="uid://bj34jasddssm7" path="res://assets/cop.png" id="2_8a633"]
 [ext_resource type="Script" path="res://actors/scripts_generic/follow_path.gd" id="2_ulq6u"]
+[ext_resource type="FontFile" uid="uid://cloq7owj3ab1a" path="res://assets/VT323-Regular.ttf" id="3_uq7wm"]
 
 [sub_resource type="Curve3D" id="Curve3D_r23fq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4, 2, -4, 0, 0, 0, 0, 0, 0, -4, 2, 4),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4, 2.88872, -3.97533, 0, 0, 0, 0, 0, 0, -2.72293, 1.49496, 1.97839),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -19,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999615, 0.0277472, 0, -0.0277472, 0.999615
 curve = SubResource("Curve3D_r23fq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -4, 2, -1.53035)
+transform = Transform3D(-0.977758, 0.0467839, -0.204441, -1.10529e-05, 0.974786, 0.223121, 0.209726, 0.218161, -0.953107, -3.49506, 2.33764, -1.6213)
 progress = 2.47
 loop = false
 script = ExtResource("2_ulq6u")
@@ -34,3 +35,31 @@ texture = ExtResource("2_8a633")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Sprite3D/StaticBody3D"]
 shape = SubResource("CapsuleShape3D_jsacr")
+
+[node name="Text01" type="Label3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(-0.999871, 0.00920037, 0.0132012, 0.0135784, 0.922641, 0.385425, -0.0086339, 0.385554, -0.922645, -2.24524, -0.901767, 1.22705)
+visible = false
+billboard = 1
+render_priority = 1
+outline_render_priority = 0
+text = "Step out of the vehicle!"
+font = ExtResource("3_uq7wm")
+font_size = 24
+outline_size = 8
+uppercase = true
+
+[node name="Text02" type="Label3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(-0.999871, 0.00920037, 0.0132012, 0.0135784, 0.922641, 0.385425, -0.0086339, 0.385554, -0.922645, -2.24524, -0.901767, 1.22705)
+visible = false
+billboard = 1
+render_priority = 1
+outline_render_priority = 0
+text = "Okay, have a good one!"
+font = ExtResource("3_uq7wm")
+font_size = 24
+outline_size = 8
+uppercase = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
