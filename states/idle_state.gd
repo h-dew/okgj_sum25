@@ -18,4 +18,4 @@ func update(delta: float) -> void:
 func choose_random_encounter() -> String:
 	#var encounters = ["cops", "hippies", "businessmen", "kids", "dog", "thunderstorm"]
 	#return encounters[PlayerData.random_generator.randi() % encounters.size()]
-	return "cops"
+	return "businessman"
