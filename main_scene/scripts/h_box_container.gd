@@ -13,13 +13,23 @@ func _process(delta: float) -> void:
 	viewport_half_size = get_viewport().get_visible_rect().size / 2
 	mouse_position = get_viewport().get_mouse_position()
 	
-	size = viewport_half_size * 2
+	size = PlayerData.vpsize
 	
 	var alpha_value = calculate_ui_fade_alpha()
 	var alpha_color = Color(1, 1, 1, alpha_value)
 	
 	left_button.self_modulate = alpha_color
 	right_button.self_modulate = alpha_color
+	
+	# button positioning
+	var texsize = get_node("Viewnav_Left").size
+	var ypos = PlayerData.vpsize.y / 2 - texsize.y / 2
+	get_node("Viewnav_Left").position.y = ypos
+	
+	get_node("Viewnav_Right").position.y = ypos
+	get_node("Viewnav_Right").position.x = PlayerData.vpsize.x - texsize.x
+
+
 
 func calculate_ui_fade_alpha() -> float:
 	var distance_from_center = abs(mouse_position.x - viewport_half_size.x)

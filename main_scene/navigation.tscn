@@ -6,20 +6,15 @@
 
 [node name="Navigation" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 mouse_filter = 1
 script = ExtResource("1_262wm")
 
 [node name="Viewnav_Left" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-offset_top = 465.0
 offset_right = 150.0
-offset_bottom = 615.0
+offset_bottom = 150.0
 size_flags_vertical = 4
 texture_normal = ExtResource("1_l5uwk")
 texture_hover = ExtResource("2_o0tbf")
@@ -28,10 +23,8 @@ stretch_mode = 0
 [node name="Viewnav_Right" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-offset_left = 1770.0
-offset_top = 465.0
-offset_right = 1920.0
-offset_bottom = 615.0
+offset_right = 150.0
+offset_bottom = 150.0
 size_flags_horizontal = 10
 size_flags_vertical = 4
 texture_normal = ExtResource("1_l5uwk")
